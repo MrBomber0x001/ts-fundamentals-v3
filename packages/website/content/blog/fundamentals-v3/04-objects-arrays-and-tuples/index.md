@@ -337,3 +337,11 @@ numPair.pop() // [4, 5]
 numPair.pop() // [4]
 numPair.pop() // []
 ```
+
+> Now readonly is supported, so you can't exceed or modify the tuple length with any operations!
+
+```ts twoslash
+const numPair: readonly [number, number] = [4, 5]
+numPair.push(6); // Property 'push' does not exist on type readonly [number, number]'.
+numPair.pop(); // Property 'pop' does not exist on type readonly [number, number]'
+```
